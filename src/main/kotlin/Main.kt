@@ -17,6 +17,9 @@
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
+        /*
+        Init code for Kotlin implementations and examples
+         */
         DirectSequencing.example1()
         DirectSequencing.example1Implementation1(2, 6)
         DirectSequencing.example2()
@@ -28,5 +31,21 @@ object Main {
 
         ConditionalIteration.example1()
         ConditionalIteration.example1Implementation1(14)
+
+
+        /*
+        Init code for Java implementations and examples
+         */
+        DirectSequencingJava.example1()
+        DirectSequencingJava.example1Implementation1(2, 6)
+        DirectSequencingJava.example2()
+        DirectSequencingJava.example2Implementation1(1, 3, arrayOf(3, 2, 1, 4, 5, 6))
+
+        BoundedIterationJava.example1Type1()
+        BoundedIterationJava.example1Type2()
+        BoundedIterationJava.example1Implementation1(12)
+
+        ConditionalIterationJava.example1()
+        ConditionalIterationJava.example1Implementation1(14)
     }
 }
