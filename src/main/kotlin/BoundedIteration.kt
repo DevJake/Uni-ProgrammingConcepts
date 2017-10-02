@@ -14,19 +14,25 @@
  * limitations under the License.
  */
 
-object Main {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        DirectSequencing.example1()
-        DirectSequencing.example1Implementation1(2, 6)
-        DirectSequencing.example2()
-        DirectSequencing.example2Implementation1(1, 3, arrayOf(3, 2, 1, 4, 5, 6))
+object BoundedIteration {
+    fun example1Type1() {
+        val n = 10
+        var SUM = 0
 
-        BoundedIteration.example1Type1()
-        BoundedIteration.example1Type2()
-        BoundedIteration.example1Implementation1(12)
-
-        ConditionalIteration.example1()
-        ConditionalIteration.example1Implementation1(14)
+        for (i in 1..n) {
+            SUM = SUM + i
+        }
     }
+
+    fun example1Type2() {
+        val n = 10
+        var SUM = 0
+
+        for (i in n downTo 1) {
+            //Using an infix method to decrementally iterate through the values
+            SUM = SUM + i
+        }
+    }
+
+    fun example1Implementation1(n: Int) = (1..n).sum()
 }

@@ -14,19 +14,26 @@
  * limitations under the License.
  */
 
-object Main {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        DirectSequencing.example1()
-        DirectSequencing.example1Implementation1(2, 6)
-        DirectSequencing.example2()
-        DirectSequencing.example2Implementation1(1, 3, arrayOf(3, 2, 1, 4, 5, 6))
+object ConditionalIteration {
+    fun example1() {
+        var n = 10
+        var SUM = 0
+        var ITER = 1
 
-        BoundedIteration.example1Type1()
-        BoundedIteration.example1Type2()
-        BoundedIteration.example1Implementation1(12)
+        while (ITER <= n) {
+            SUM = SUM + ITER
+            ITER = ITER + 1
+        }
+    }
 
-        ConditionalIteration.example1()
-        ConditionalIteration.example1Implementation1(14)
+    fun example1Implementation1(n: Int): Int {
+        var iter = 0
+        var sum = 0
+        while (iter <= n) {
+            sum += iter
+            iter += 1
+        }
+
+        return sum
     }
 }
