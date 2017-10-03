@@ -14,14 +14,14 @@
  *    limitations under the License.
  */
 
-object aLaRusse: MultAlgo {
+object aLaRusse : MultAlgo {
     override fun mult(a: Int, b: Int): Int {
         if (a <= 0 || b <= 0) return 0
         var russe = mutableMapOf<Int, Int>()
         russe.put(a, b)
         var i = a
         var j = b
-        while (i/2 > 0){
+        while (i / 2 > 0) {
             i /= 2
             j *= 2
             russe.put(i, j)
@@ -31,10 +31,8 @@ object aLaRusse: MultAlgo {
     }
 }
 
-object highSchoolMult: MultAlgo {
-    override fun mult(a: Int, b: Int): Int {
-        return 0 //placeholder
-    }
+object highSchoolMult : MultAlgo {
+    override fun mult(a: Int, b: Int): Int = a.toString().toCharArray().map { Character.getNumericValue(it) }.reversed().withIndex().map({ (i, p) -> b * (p * Math.pow(10.0, i.toDouble())) }).sum().toInt()
 }
 
 interface MultAlgo {

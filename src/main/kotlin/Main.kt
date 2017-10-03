@@ -22,5 +22,9 @@ object Main {
             println(aLaRusse.mult(8, 4))
             println(aLaRusse.mult(8, 10))
             println(aLaRusse.mult(38494, 84))
+
+            println(highSchoolMult.mult(4, 4))
+            println(highSchoolMult.mult(38494, 84))
+            println(highSchoolMult.mult(32, 4))
     }
 }
