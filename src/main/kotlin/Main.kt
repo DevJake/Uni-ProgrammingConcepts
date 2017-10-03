@@ -17,6 +17,10 @@
 object Main {
         @JvmStatic
         fun main(args: Array<String>){
-
+            println(aLaRusse.mult(0, 4))
+            println(aLaRusse.mult(4, 4))
+            println(aLaRusse.mult(8, 4))
+            println(aLaRusse.mult(8, 10))
+            println(aLaRusse.mult(38494, 84))
     }
 }
