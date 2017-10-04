@@ -14,4 +14,8 @@
  * limitations under the License.
  */
 
-rootProject.name = 'Uni-ProgrammingConcepts'
+object Main {
+    @JvmStatic
+    fun main(args: Array<String>) {
+    }
+}
