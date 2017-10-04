@@ -15,8 +15,8 @@
  */
 
 /**
- * This class aims to allow for multiplication of numbers
- * using the a la Russe method.
+ * This class aims to allow for multiplication of
+ * only positive numbers using the a la Russe method.
  */
 object aLaRusse : MultAlgo {
     override fun mult(a: Int, b: Int): Int {
@@ -36,8 +36,9 @@ object aLaRusse : MultAlgo {
 }
 
 /**
- * This class aims to allow for multiplication of numbers
- * using the 'highschool multiplication' method.
+ * This class aims to allow for multiplication of
+ * both positive and negative integers using
+ * the 'highschool multiplication' method.
  */
 object highSchoolMult : MultAlgo {
     override fun mult(a: Int, b: Int): Int =
