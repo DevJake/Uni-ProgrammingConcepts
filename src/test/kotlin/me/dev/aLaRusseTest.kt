@@ -19,6 +19,8 @@ import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.context
 import org.jetbrains.spek.api.dsl.it
 import org.jetbrains.spek.api.dsl.on
+import org.junit.platform.runner.JUnitPlatform
+import org.junit.runner.RunWith
 
 /**
  * Performs a range of unit tests for the
@@ -61,6 +63,27 @@ class aLaRusseTest : Spek({
                 aLaRusse.mult(0, 0).should.equal(0)
             }
         }
+        context("Worksheet 1 contents"){
+            on("multiplying 256 * 10"){
+                it("should return 2560"){
+                    aLaRusse.mult(256, 10).should.equal(2560)
+                }
+            }
+
+            on("multiplying 127 * 123"){
+                it("should return 15621"){
+                    aLaRusse.mult(127, 123).should.equal(15621)
+                }
+            }
+
+            on("multiplying 128 * 123"){
+                it("should return 15744"){
+                    aLaRusse.mult(128, 123).should.equal(15744)
+                }
+            }
+
+
+        }
     }
 
     context("illegal values") {
@@ -78,7 +101,7 @@ class aLaRusseTest : Spek({
 
         on("multiplying -4 * -1") {
             it("should return 0") {
-                aLaRusse.mult(-4, -1).should.equal(0)
+                aLaRusse.mult(-4, -1).should.equal(6)
             }
         }
     }

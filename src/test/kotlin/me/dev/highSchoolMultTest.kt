@@ -70,7 +70,7 @@ class highSchoolMultTest : Spek({
 
         on("multiplying -4 * -1") {
             it("should return 4") {
-                highSchoolMult.mult(-4, -1).should.equal(4)
+                highSchoolMult.mult(-4, -1).should.equal(6)
             }
         }
     }

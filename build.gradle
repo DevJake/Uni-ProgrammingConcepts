@@ -36,21 +36,22 @@ plugins {
     id 'application'
     id 'org.jetbrains.kotlin.jvm' version '1.1.4'
 }
-apply plugin: 'kotlin'
+//apply plugin: 'kotlin'
 apply plugin: 'org.jetbrains.dokka'
+apply plugin: 'kotlin'
 apply plugin: 'org.junit.platform.gradle.plugin'
 
 sourceCompatibility = 1.8
 
-junitPlatform {
-    reportsDir file("$buildDir/test-results/spek")
-
-    filters {
-        engines {
-            include 'spek'
-        }
-    }
-}
+//junitPlatform {
+//    reportsDir file("$buildDir/test-results/spek")
+//
+//    filters {
+//        engines {
+//            include 'spek'
+//        }
+//    }
+//}
 
 repositories {
     mavenCentral()
@@ -64,9 +65,11 @@ dependencies {
     testCompile "org.jetbrains.spek:spek-junit-platform-engine:1.1.2"
     testCompile "org.jetbrains.kotlin:kotlin-test"
     testCompile "org.junit.platform:junit-platform-runner:1.0.0-M4"
+    testCompile "org.junit.platform:junit-platform-launcher:1.0.0-M4"
 
     testCompile "org.junit.jupiter:junit-jupiter-api:5.0.0-M4"
     testRuntime "org.junit.jupiter:junit-jupiter-engine:5.0.0-M4"
+    testRuntime "org.junit.platform:junit-platform-console:1.0.0-M4"
 
     testCompile "com.winterbe:expekt:0.5.0"
 }
